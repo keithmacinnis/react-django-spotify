@@ -1,7 +1,10 @@
-from django.http.response import HttpResponse
+from apiHandler.serializers import RoomSerializer
+from apiHandler.models import PartyRoom
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .models import PartyRoom
 
-# Create your views here.
-def main(request):
-    return HttpResponse("<h1>hey</h1>")
+class RoomView(generics.ListAPIView):
+    queryset = PartyRoom.objects.all()
+    serializer_class = RoomSerializer
+
