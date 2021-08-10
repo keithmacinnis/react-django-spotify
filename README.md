@@ -11,6 +11,6 @@ nav to ./spotify_controller/music_controller/front
 ``` npm i ``` 
 ``` npm run dev ```
 
-# log
+### log
 
 Aug 9th - added react 
